@@ -1,0 +1,469 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #1877f2;
+    --light-white: #e8f0fe;
+    --green: #42b72a;
+    --backgrond: #f0f2f5;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: var(--backgrond);
+    display: flex;
+    align-items: center;
+}
+
+.container .login-content{
+    width: 100%;
+    margin: 0 2rem;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .login-content .login-details{
+    max-width: 550px;
+}
+
+.container .login-content .login-details :nth-child(1){
+    font-size: 4rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+
+.container .login-content .login-details :nth-child(2){
+    font-size: 1.8rem;
+}
+
+.container .login-content .login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .login-content .login-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 1rem 1rem 1.8rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.24);
+    position: relative;
+}
+
+.container .login-content .login-form form input{
+    width: 25rem;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid var(--light-white);
+    border-color: var(--light-white);
+    caret-color: var(--primary-color);
+}
+
+.container .login-content .login-form .password-wapper{
+    position: relative;
+}
+
+.container .login-content .login-form form .password{
+    padding-right: 3rem;
+}
+
+.container .login-content .login-form form input::placeholder{
+    color: #999;
+}
+
+.container .login-content .login-form form input:focus{
+    border-color: var(--primary-color);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.container .login-content .login-form form i{
+    position: absolute;
+    top: 1rem;
+    right: 2%;
+    padding: .3rem;
+    border-radius: 50%;
+    color: #555;
+    font-size: .75rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.container .login-content .login-form form i:hover{
+    background: #ddd;
+    color: #000;
+}
+
+.container .login-content .login-form form .submit-btn{
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    padding: .8rem 0;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.container .login-content .login-form form .Forgotten-password{
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.container .login-content .login-form form .Forgotten-password:hover{
+    text-decoration: underline;
+}
+
+.container .login-content .login-form form .line{
+    width: 100%;
+    border-bottom: 1px solid #dadde1; 
+    margin: 1.2rem 0 1.5rem 0;
+}
+
+.container .login-content .login-form form .create-new-account-btn{
+    color: #fff;
+    background: var(--green);
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.container .login-content .login-form small .create-new-page-link{
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container .login-content .login-form small .create-new-page-link:hover{
+    text-decoration: underline;
+}
+
+/* sign up styling */
+.sign-up{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition-duration: 400ms;
+    opacity: 0;
+}
+
+.sign-up::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .8);
+}
+
+.sign-up .sign-up-container{
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 1rem 1rem 1.8rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.24);
+    position: relative;
+}
+
+.sign-up .sign-up-container .sign-up-heading{
+    width: 100%;
+}
+
+.sign-up .sign-up-container .sign-up-heading::after{
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid #8a8d91;
+    position: absolute;
+    left: 0;
+}
+
+.sign-up .sign-up-container .sign-up-heading .head-wapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-up .sign-up-container .sign-up-heading .head-wapper .head-content h1{
+    font-size: 2rem;
+}
+
+.sign-up .sign-up-container .sign-up-heading .head-wapper .head-content p{
+    color: #8a8d91;
+    margin: .5em 0 1rem 0;
+}
+
+.sign-up .sign-up-container .sign-up-heading .head-wapper i{
+    font-size: 1.2rem;
+}
+
+.sign-up .sign-up-container form {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign-up .sign-up-container form .form-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.sign-up .sign-up-container form .form-group .input-wapper{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.sign-up .sign-up-container form .form-group .input-wapper input{
+    width: 190px;
+    padding: .8rem;
+    padding-right: 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid #8d949e;
+    background: #f5f6f7;
+}
+
+.sign-up .sign-up-container form .form-group .input-wapper input::placeholder{
+    color: #8d949e;
+    font-size: 1rem;
+}
+
+.sign-up .sign-up-container form .form-group .input-wapper i{
+    position: absolute;
+    right: .5rem;
+    top: .8rem;
+    color: red;
+    display: none;
+}
+
+.sign-up .sign-up-container form .moblie-password .input-wapper{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.sign-up .sign-up-container form .moblie-password .input-wapper input{
+    flex: 1;
+    padding: .8rem;
+    padding-right: 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid #8d949e;
+    background: #f5f6f7;
+    margin-bottom: .5rem;
+}
+
+.sign-up .sign-up-container form .moblie-password .input-wapper i{
+    position: absolute;
+    right: .5rem;
+    top: .8rem;
+    color: red;
+    display: none;
+}
+
+.sign-up .sign-up-container form .form-date{
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up .sign-up-container form .form-date .label{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-up .sign-up-container form .form-date .label > i{
+    color: red;
+    display: none;
+}
+
+.sign-up .sign-up-container form .form-date .label .label-content small{
+    font-size: .8rem;
+}
+
+.sign-up .sign-up-container form .form-date .label .label-content i{
+    scale: .8;
+    background: #f5f6f7;
+}
+
+.sign-up .sign-up-container form .form-date .date-input,
+.sign-up .sign-up-container form .form-radios .radio-btn{
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.sign-up .sign-up-container form .form-date .date-input select,
+.sign-up .sign-up-container form .form-radios .radio-btn span{
+    flex: 1;
+    padding: .8rem .5rem;
+    font-size: .9rem;
+    border: 1px solid #8d949e;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: .8rem;
+}
+
+.sign-up .sign-up-container form .form-radios .label-content small{
+    font-size: .8rem;
+}
+
+.sign-up .sign-up-container form .form-radios .label-content i{
+    scale: .8;
+    background: #f5f6f7;
+}
+
+.sign-up .sign-up-container form .form-radios .radio-btn span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-up .sign-up-container form .form-details p{
+    color: #111;
+    font-size: .7rem;
+    margin-bottom: .8rem;
+}
+
+.sign-up .sign-up-container form .form-details p a{
+    text-decoration: underline;
+}
+
+.sign-up .sign-up-container form button{
+    width: fit-content;
+    color: #fff;
+    background: var(--green);
+    font-size: 1.1rem;
+    padding: .5rem 3rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    align-self: center;
+}
+
+
+.footer{
+    width: 100%;
+}
+
+.footer .footer-container{
+    padding: 2rem 4rem;
+}
+
+.footer .footer-container .footer-content ul li{
+    display: inline-block;
+    font-size: .75rem;
+    color: #8a8d91;
+}
+
+.footer .footer-container .footer-content .list-content-1{
+    margin-left: -.5rem;
+}
+
+.footer .footer-container .footer-content .list-content-1 li{
+    padding-left: .5rem;
+}
+
+.footer .footer-container .footer-content .list-content-1 .plus-btn{
+    padding: 0 .5rem;
+    font-size: 1.2rem;
+    border: 1px solid #8a8d91;
+    margin-left: .4rem;
+}
+
+.footer .footer-container .footer-content .list-content-2{
+    margin-left: -.8rem;
+}
+
+.footer .footer-container .footer-content .list-content-2 li{
+    padding-left: .8rem;
+}
+
+.footer .footer-container .footer-content ul li a{
+    text-decoration: none;
+    color: #8a8d91;
+}
+
+.footer .footer-container .line{
+    width: 100%;
+    margin: .5rem 0;
+    border: 1px solid #dadde1;
+}
+
+.footer .footer-container .meta{
+    margin: 1.5rem 0;
+}
+
+.footer .footer-container .meta{
+    font-size: .75rem;
+    color: #8a8d91;
+}
+
+@media (max-width: 950px) {
+    .container .login-content{
+        flex-direction: column;
+    }
+
+    .container .login-content .login-details{
+        max-width: 400px;
+    }
+
+    .container .login-content .login-details :nth-child(1){
+        text-align: center;
+    }
+    
+    .container .login-content .login-details :nth-child(2){
+        font-size: 1.5rem;
+        margin: 1rem auto 2.5rem auto;
+        text-align: center;
+    }
+
+    .container .login-content .login-form form input{
+        width: 22.5rem;
+    }
+
+    .container .login-content .login-form small .create-new-page-link{
+        font-size: initial;
+    }
+}

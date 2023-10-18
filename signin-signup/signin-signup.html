@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='signin-signup.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="login-content">
+            <div class="login-details">
+                <p>facebook</p>
+                <p>Facebook helps you connect and share with the people in your life.</p>
+            </div>
+            <div class="login-form">
+                <form>
+                    <input type="text" placeholder="Email address or phone number" autofocus tabindex="1">
+
+                    <div class="password-wapper">
+                        <input type="password" class="password" id="password" placeholder="Password">
+                        <i class="fa-regular fa-eye show-password"></i>
+                    </div>
+
+                    <button class="submit-btn" type="submit">Log in</button>
+
+                    <a href="#" class="Forgotten-password"><small>Forgotten password?</small></a>
+
+                    <div class="line"></div>
+
+                    <a href="#" class="create-new-account-btn">Create new account</a>
+                </form>
+                <small><a href="#" class="create-new-page-link">Create a Page</a> for a celebrity, brand or business.</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up -->
+    <div class="sign-up">
+        <div class="sign-up-container">
+            <!-- Header -->
+            <div class="sign-up-heading">
+                <div class="head-wapper">
+                    <div class="head-content">
+                        <h1>Sign Up</h1>
+                        <p>It's quick and easy</p>
+                    </div>
+                    <i class="fa-solid fa-x close-sign-up-btn"></i>
+                </div>
+            </div>
+            <form>
+                <div class="form-group">
+                    <div class="input-wapper">
+                        <input type="text" id="first-name" placeholder="First name">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                    <div class="input-wapper">
+                        <input type="text" id="surname" placeholder="Surname">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                </div>
+                <div class="moblie-password">
+                    <div class="input-wapper">
+                        <input type="text" placeholder="Moblile number or email address" id="number-email">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                    <div class="input-wapper">
+                        <input type="password" id="new-password" placeholder="New password">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                </div>
+                <div class="form-date">
+                    <div class="label">
+                        <div class="label-content">
+                            <small>Date of Birth</small>
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                    <div class="date-input">
+                        <select id="day" name="day">
+                            <option>Day</option>
+                            <!-- Generate day options (1 to 31) using a loop -->
+                            <?php for ($i = 1; $i <= 31; $i++) { ?>
+                                <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                            <?php } ?>
+                        </select>
+
+                        <select id="month" name="month">
+                                <option value="">Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                        </select>
+
+                        <select id="year" name="year">
+                            <option value="">Year</option>
+                            <!-- Generate year options (e.g., from 1900 to the current year) using a loop -->
+                            <?php 
+                              $currentYear = date("Y");
+                              for ($i = 1900; $i <= $currentYear; $i++) { 
+                            ?>
+                              <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                            <?php } ?>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="form-radios">
+                    <div class="label-content">
+                        <small>Gender</small>
+                        <i class="fa-solid fa-circle-question"></i>
+                    </div>
+                    <div class="radio-btn">
+                        <span>
+                            <label for="female">Female</label>
+                            <input type="radio" name="gender" id="female">
+                        </span>
+                        <span>
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="male">
+                        </span>
+                        <span>
+                            <label for="custom">Custom</label>
+                            <input type="radio" name="gender" id="custom">
+                        </span>
+                    </div>
+                </div>
+                <div class="form-details">
+                    <p>
+                        People who use our service may have uploaded your contact information to Facebook. <a href="#">Learn more.</a>
+                    </p>
+                    <p>By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy.</a> You may receive SMS notifications from us and can opt out at any time.</p>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <ul class="list-content-1">
+                    <li class="list-items">English (UK)</li>
+                    <li class="list-items"><a href="#">Hausa</a></li>
+                    <li class="list-items"><a href="#">Français (France)</a></li>
+                    <li class="list-items"><a href="#">Português (Brasil)</a></li>
+                    <li class="list-items"><a href="#">Español</a></li>
+                    <li class="list-items"><a href="#">العربية</a></li>
+                    <li class="list-items"><a href="#">Bahasa Indonesia</a></li>
+                    <li class="list-items"><a href="#">Deutsch</a></li>
+                    <li class="list-items"><a href="#">日本語</a></li>
+                    <li class="list-items"><a href="#">Italiano</a></li>
+                    <li class="list-items"><a href="#">हिन्दी</a></li>
+                    <button class="plus-btn">+</button>
+                </ul>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="footer-content">
+                <ul class="list-content-2">
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Log in</a></li>
+                    <li><a href="#">Messenger</a></li>
+                    <li><a href="#">Facebook Lite</a></li>
+                    <li><a href="#">Video</a></li>
+                    <li><a href="#">Places</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Meta Pay</a></li>
+                    <li><a href="#">Meta Store</a></li>
+                    <li><a href="#">Meta Quest</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Threads</a></li>
+                    <li><a href="#">Fundraisers</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Voting Information Centre</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Privacy Centre</a></li>
+                    <li><a href="#">Groups</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Create ad</a></li>
+                    <li><a href="#">Create Page</a></li>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">AdChoices</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact uploading and non-usersSettings</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <div class="meta">
+                    <p>Meta © 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="signin-signup.js"></script>
+</body>
+</html>
