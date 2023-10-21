@@ -67,8 +67,11 @@ img {
 
 .line{
     width: 100%;
-    margin: 1rem 0;
     border-bottom: 1px solid #ddd;
+}
+
+.margin{
+    margin: 1rem 0;
 }
 
 /* for smoother scrollbars  */
@@ -202,7 +205,7 @@ header .nav .middle-nav ul li a.active:hover {
     align-items: center;
     justify-content: center;
     position: relative;
-    gap: 1rem;
+    gap: .5rem;
     margin-right: 2rem;
 }
 
@@ -211,7 +214,7 @@ header .nav .middle-nav ul li a.active:hover {
 .header .nav .right-nav .right-nav-btns .right-nav-notifications .nav-notification-icon {
     display: flex;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.35rem;
     border-radius: 50%;
     background: var(--backgrond);
     cursor: pointer;
@@ -226,13 +229,15 @@ header .nav .middle-nav ul li a.active:hover {
 .header .nav .right-nav .right-nav-btns .right-nav-menu .menu-icon svg,
 .header .nav .right-nav .right-nav-btns .right-nav-messager .nav-messager-icon svg,
 .header .nav .right-nav .right-nav-btns .right-nav-notifications .nav-notification-icon svg {
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
 }
 
 .header .nav .right-nav .right-nav-btns .right-nav-profile .nav-profile-image {
-    width: 3rem;
-    height: 3rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    overflow: hidden;
     cursor: pointer;
 }
 
@@ -265,8 +270,8 @@ header .nav .middle-nav ul li a.active:hover {
     position: fixed;
     width: 25%;
     left: 0;
-    height: 85vh;
-    overflow: scroll;
+    height: 95vh;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -289,6 +294,108 @@ header .nav .middle-nav ul li a.active:hover {
 .main .main-container .main-left .main-left-block .block .profile-image {
     width: 2rem;
     height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.main .main-container .main-left .main-left-block .block .block-icon .icon-1{
+    display: block;
+    background: url("images/left-icon.png");
+    background-position: 0px -296px;
+    width: 2rem;
+    height: 2rem;
+    scale: .8;
+}
+
+.main .main-container .main-left .main-left-block .block .block-icon .icon-2{
+    display: block;
+    background: url("images/ads-mansger.png");
+    width: 2rem;
+    height: 2rem;
+    scale: .8;
+}
+
+.main .main-container .main-left .main-left-block .block .block-icon .icon-3{
+    display: block;
+    background: url("images/feed-icon.png");
+    width: 2rem;
+    height: 2rem;
+    scale: .8;
+}
+
+.main .main-container .main-left .main-left-block .block .block-icon .icon-4{
+    display: block;
+    background: url("images/left-icon.png");
+    background-position: 0px -37px;
+    width: 2rem;
+    height: 2rem;
+    scale: .8;
+}
+
+.main .main-container .main-left .main-left-block .block .block-icon .icon-5{
+    display: block;
+    background: url("images/left-icon.png");
+    background-position: 0px -407px;
+    width: 2rem;
+    height: 2rem;
+    scale: .8;
+}
+
+.main .main-container .main-left .main-left-block .block .block-icon .icon-6{
+    display: block;
+    background: url("images/left-icon.png");
+    background-position: 0px -518px;
+    width: 2rem;
+    height: 2rem;
+    scale: .8;
+}
+
+.main .main-container .main-left .main-left-block .block .block-icon .icon-7{
+    display: block;
+    background: url("images/left-icon.png");
+    background-position: 0px -444px;
+    width: 2rem;
+    height: 2rem;
+    scale: .8;
+}
+
+.main .main-container .main-left .main-left-block .block .block-icon .icon-8{
+    display: block;
+    background: url("images/left-icon.png");
+    background-position: 0px -185px;
+    width: 2rem;
+    height: 2rem;
+    scale: .8;
+}
+
+.main .main-container .main-left .main-left-block .block .block-icon .icon-9{
+    display: block;
+    background: url("images/dashborad-icon.png");
+    width: 2rem;
+    height: 2rem;
+    scale: .8;
+}
+
+.main .main-container .main-left .main-left-block .block .block-icon .icon-10{
+    display: block;
+    background: url("images/left-icon.png");
+    background-position: 0px -111px;
+    width: 2rem;
+    height: 2rem;
+    scale: .8;
+}
+
+.main .main-container .main-left .main-left-block :nth-last-child() .block-icon svg{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+}
+
+.main .main-container .main-left .main-left-block #left-nav-see-more .block-icon svg {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    padding: .5rem;
 }
 
 .main .main-container .main-left .main-left-block .block .block-icon svg {
@@ -463,8 +570,13 @@ header .nav .middle-nav ul li a.active:hover {
 
 .main .main-container .main-middle .middle-container .feeds .feed-container{
     width: 100%;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed{
     background: #fff;
     border-radius: 10px;
+    margin-bottom: 1rem;
+    padding-bottom: .8rem;
 }
 
 .main .main-container .main-middle .middle-container .feeds .feed-container .feed .head{
@@ -482,6 +594,12 @@ header .nav .middle-nav ul li a.active:hover {
     gap: .5rem;
 }
 
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .head .title .title-text :nth-child(2){
+    font-size: .8rem;
+    color: #777;
+    margin-top: .2rem;
+}
+
 .main .main-container .main-middle .middle-container .feeds .feed-container .feed .description{
     padding: 0 1rem .8rem 1rem;
 }
@@ -493,7 +611,7 @@ header .nav .middle-nav ul li a.active:hover {
 }
 */
 
-.main .main-container .main-middle .middle-container .feeds .feed-container .feed .reaction{
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed > .reaction{
     padding: .8rem 1rem;
 }
 
@@ -532,4 +650,106 @@ header .nav .middle-nav ul li a.active:hover {
 .main .main-container .main-middle .middle-container .feeds .feed-container .feed .reaction .reaction-display .reaction-count{
     font-size: .8rem;
     color: #666;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .reaction .reaction-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .reaction .reaction-btn > div{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .reaction .view-comments a{
+    color: #000;
+    text-decoration: none;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .reaction .view-comments a:hover{
+    text-decoration: underline;
+}
+
+/* Comment section */
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section{
+    padding: 0 1rem;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .comments{
+    display: flex;
+    gap: .5rem;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .comments .comment-content{}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .comments .comment-content .comment-text{
+    background: var(--backgrond);
+    padding: .5rem;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .comments .comment-content .comment-text :nth-child(1){
+    font-size: .8rem;
+    font-weight: 700;
+    margin-bottom: .3rem;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .comments .comment-content .comment-text :nth-child(2){
+    font-weight: lighter;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .comments .comment-content .comment-like-reply{
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .comments .comment-content .comment-like-reply .action-btn{
+    display: flex;
+    gap: 1rem;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .comments .comment-content .comment-like-reply .action-btn a{
+    font-size: .8rem;
+    color: #777;
+    text-decoration: none;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .comments .comment-content .comment-like-reply .action-btn a:hover{
+    text-decoration: underline;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .comments .comment-content .comment-like-reply .reaction{
+    width: 1rem;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .comments .comment-content .comment-like-reply .reaction img{
+    display: flex;
+    align-items: center;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .create-comment{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .create-comment .comment-input{
+    width: 100%;
+    background: var(--backgrond);
+    border-radius: 50px;
+    position: sticky;
+    bottom: 0;
+}
+
+.main .main-container .main-middle .middle-container .feeds .feed-container .feed .comment-section .create-comment .comment-input input{
+    width: 100%;
+    padding: .8rem 5rem .8rem 1rem;
+    outline: none;
+    background: transparent;
+    border: none;
 }
